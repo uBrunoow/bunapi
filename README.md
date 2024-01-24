@@ -13,3 +13,13 @@ bun run dev
 ```
 
 Open http://localhost:3000/ with your browser to see the result.
+
+
+## Migrations
+
+To make a migration run the next code:
+
+```bash
+bun run generate
+bun -r esbuild-register src/db/migrate.ts
+```
