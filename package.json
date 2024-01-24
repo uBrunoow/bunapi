@@ -3,13 +3,39 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/http/index.ts",
+    "introspect": "drizzle-kit introspect:pg --config=drizzle.config.ts",
+    "generate": "drizzle-kit generate:pg --config=drizzle.config.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/cookie": "^0.8.0",
+    "@elysiajs/cors": "^0.8.0",
+    "@elysiajs/jwt": "^0.8.0",
+    "@paralleldrive/cuid2": "^2.2.2",
+    "@react-email/components": "^0.0.14",
+    "dayjs": "^1.11.10",
+    "dotenv": "^16.4.0",
+    "drizzle-orm": "^0.29.3",
+    "drizzle-typebox": "^0.1.1",
+    "elysia": "latest",
+    "postgres": "^3.4.3",
+    "react": "^18.2.0",
+    "resend": "^3.1.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@faker-js/faker": "^8.3.1",
+    "@rocketseat/eslint-config": "^2.1.0",
+    "@types/pg": "^8.10.9",
+    "@types/react": "^18.2.48",
+    "bun-types": "latest",
+    "chalk": "^5.3.0",
+    "drizzle-kit": "^0.20.13",
+    "eslint": "^8.56.0",
+    "eslint-plugin-drizzle": "^0.2.3",
+    "eslint_d": "^13.1.2",
+    "pg": "^8.11.3",
+    "typescript": "^5.3.3"
   },
   "module": "src/index.js"
 }
